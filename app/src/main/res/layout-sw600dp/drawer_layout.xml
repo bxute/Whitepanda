@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:background="#efefef"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:paddingTop="18dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:background="@drawable/drawer_header_ripple"
+            android:id="@+id/drawer_header"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/drawer_image"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                fresco:placeholderImage="@drawable/profile_placeholder"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:id="@+id/drawer_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drawer_image"
+                android:paddingBottom="0dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxLines="1"
+                android:text="Ankit Kumar"
+                android:textColor="#232323"
+                android:textSize="24sp" />
+
+            <TextView
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:id="@+id/drawer_view_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drawer_username"
+                android:paddingBottom="8dp"
+                android:paddingRight="8dp"
+                android:text="ankit@gmail.com"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/drawer_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/logout"
+            android:layout_below="@+id/drawer_header"
+            android:background="#fefefe"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:id="@+id/myFeeds"
+                android:textColor="#3b3b3b"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text="My Content"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:id="@+id/claimed"
+                android:textColor="#3b3b3b"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:textSize="18sp"
+                android:layout_below="@+id/myFeeds"
+                android:gravity="center_vertical"
+                android:text="Claimed"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:id="@+id/account"
+                android:textColor="#3b3b3b"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:textSize="18sp"
+               android:layout_below="@+id/claimed"
+                android:gravity="center_vertical"
+                android:text="My Account"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+            <ImageView
+
+                android:layout_marginLeft="18dp"
+               android:layout_below="@+id/account"
+                android:id="@+id/domain_divider1"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp" />
+
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:textSize="18sp"
+               android:layout_below="@+id/domain_divider1"
+                android:text="Followed"
+                android:id="@+id/i_followed"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:gravity="center_vertical"
+                android:textColor="@color/colorAccent"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:textSize="18sp"
+                android:layout_below="@+id/i_followed"
+                android:text="Followers"
+                android:id="@+id/my_followers"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+            <ImageView
+
+                android:layout_marginLeft="18dp"
+                android:layout_below="@+id/my_followers"
+                android:id="@+id/domain_divider2"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp" />
+
+
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:id="@+id/feedback"
+                android:textColor="#3b3b3b"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:textSize="18sp"
+                android:layout_below="@+id/domain_divider2"
+                android:gravity="center_vertical"
+                android:text="Issues &amp; Feedback"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+            <TextView
+                android:clickable="true"
+                android:background="@drawable/drawer_item_selector"
+                android:id="@+id/terms_condition"
+                android:textColor="#3b3b3b"
+                android:paddingRight="18dp"
+                android:paddingLeft="18dp"
+                android:layout_below="@+id/feedback"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:text="Terms &amp; Conditions"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:background="@drawable/drawer_item_selector"
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:padding="18dp"
+            android:text="LOGOUT"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</ScrollView>

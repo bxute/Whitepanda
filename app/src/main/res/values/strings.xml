@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Whitepanda</string>
+
+    <string name="title_activity_tour">Tour</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">WhitePanda</string>
+    <string name="drawer_close">Whitepanda</string>
+    <string name="report_question_dialog_title">Report Question</string>
+    <string name="report_post_dialog_title">Report Post</string>
+</resources>

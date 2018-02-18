@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/published_article_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="10dp"
+        fresco:roundingBorderColor="@color/colorAccent"
+        fresco:placeholderImage="@drawable/profile_placeholder"
+        />
+
+
+    <TextView
+        android:text="IEEE Paper on Nothing..."
+        android:layout_toRightOf="@+id/published_article_image"
+        android:id="@+id/user_profile_published_article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="http://www.google.com/myarticles"
+        android:layout_toRightOf="@+id/published_article_image"
+        android:layout_below="@+id/user_profile_published_article_title"
+        android:id="@+id/user_profile_published_article_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:text="Descriptions"
+        android:layout_below="@+id/published_article_image"
+        android:id="@+id/user_profile_published_article_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

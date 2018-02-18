@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context="com.whitepanda.activity.DetailedFeedViewActivity">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/detailedViewTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <RelativeLayout
+                    android:id="@+id/feedTopContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:paddingTop="2dp">
+
+                    <TextView
+                        android:id="@+id/cancel_detailed_view"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="match_parent"
+                        android:background="?android:selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#464646"
+                        android:textSize="28sp" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/feeds_item_owner_pic"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toRightOf="@+id/cancel_detailed_view"
+                        fresco:placeholderImage="@drawable/profile_placeholder"
+                        fresco:roundAsCircle="true" />
+
+                    <TextView
+                        android:id="@+id/feeds_item_owner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_toRightOf="@+id/feeds_item_owner_pic"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="writer"
+                        android:textColor="#202020"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/feeds_item_owner_name"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@+id/feeds_item_owner_pic"
+                        android:text=""
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dp">
+
+
+                        <TextView
+                            android:id="@+id/shareBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@id/followWriterBtn"
+                            android:background="?selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:text=""
+                            android:textColor="@color/colorAccent"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/followWriterBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/follow_btn_selector"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:paddingBottom="8dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="8dp"
+                            android:text="Follow"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="#fefefe">
+
+                <TextView
+                    android:layout_below="@+id/featured_image"
+                    android:id="@+id/detailed_feed_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:padding="16dp"
+                    android:text="The Blog"
+                    android:textColor="#1f1f1f"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/featured_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="196dp"
+                    android:layout_alignParentStart="true"
+
+                    android:visibility="gone"
+                    fresco:actualImageScaleType="centerCrop" />
+
+
+                <TextView
+                    android:id="@+id/feed_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/detailed_feed_title"
+                    android:layout_marginTop="8dp"
+                    android:lineSpacingExtra="4dp"
+                    android:padding="16dp"
+                    android:textColor="#2f2f2f"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/actionContainer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="#fefefe"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <TextView
+                    android:id="@+id/detailed_feed_like_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/feedLikeCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_toRightOf="@+id/detailed_feed_like_btn"
+                    android:gravity="center"
+                    android:text="Like"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/detailed_feed_follow_btn"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/feedLikeCaption"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/feedFollowCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="-8dp"
+                    android:layout_toRightOf="@+id/detailed_feed_follow_btn"
+                    android:gravity="center"
+                    android:text="Follow"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/feedCommentCaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="-8dp"
+                    android:background="@drawable/follow_btn_selector"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:text="COMMENT"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DCDCDC"
+                android:padding="16dp"
+                android:text="Comments"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:background="#ffffff"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:id="@+id/empty_thread_question"
+                android:textColor="@color/colorAccent"
+                android:text="Be the First to Comment !"
+                android:layout_width="match_parent"
+                android:layout_height="144dp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/commentThreadRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <include layout="@layout/comment_bottom_dialog" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/progressCover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:background="#ffffff">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

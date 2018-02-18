@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:background="@drawable/tag_bg"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="type"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/notification_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:paddingLeft="8dp"
+        android:paddingTop="2dp"
+        android:layout_toRightOf="@+id/notification_type"
+        android:text="1 day ago"
+        android:id="@+id/time_stamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/originText"
+        android:text="From"
+        android:id="@+id/originCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/originText"
+        android:layout_alignParentEnd="true"
+        android:text="Ankit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/notification_content"
+        android:padding="8dp"
+        android:layout_below="@+id/notification_type"
+        android:text="this is the notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

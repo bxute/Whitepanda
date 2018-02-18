@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/attchmentTitle"
+        android:layout_toLeftOf="@+id/removeAttachmentBtn"
+        android:padding="16dp"
+        android:text="ankit_image.png"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:background="?selectableItemBackgroundBorderless"
+        android:textColor="#ff0000"
+        android:id="@+id/removeAttachmentBtn"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text=" remove "
+        android:layout_alignParentEnd="true"
+        android:layout_width="56dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true" />
+
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/uploadedAttachmentFeedback"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:text="Y"
+        android:layout_alignParentEnd="true"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentRight="true" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/uploadFileProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="30"
+        android:padding="16dp"
+        android:layout_below="@+id/attchmentTitle"
+        />
+
+</RelativeLayout>

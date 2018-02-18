@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:background="@null"
+    android:padding="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:background="@drawable/skill_text_unselected"
+        android:id="@+id/text"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:gravity="center"
+        android:text="Ankit "
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:background="@drawable/skill_selected_overlay"
+        android:id="@+id/skill_overlay"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:gravity="center"
+        android:text=""
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fefefe"
+    android:elevation="2dp">
+
+
+    <!--Top Bar-->
+    <RelativeLayout
+        android:paddingTop="2dp"
+        android:id="@+id/feedTopContainer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            fresco:failureImage="@drawable/profile_placeholder"
+            android:id="@+id/feeds_item_owner_pic"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="8dp"
+            fresco:placeholderImage="@drawable/profile_placeholder"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/feeds_item_owner_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="11dp"
+            android:layout_toRightOf="@+id/feeds_item_owner_pic"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Ankit"
+            android:textColor="#292929"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_toRightOf="@+id/feeds_item_owner_pic"
+            android:layout_below="@+id/feeds_item_owner_name"
+            android:textSize="12sp"
+            android:text="2 days ago"
+            android:id="@+id/ago"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@+id/ago"
+            android:layout_below="@+id/feeds_item_owner_name"
+            android:textSize="12sp"
+            android:text="\u2022"
+            android:id="@+id/dot"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/feeds_item_viewsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feeds_item_owner_name"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/dot"
+            android:text="120 "
+            android:textColor="@color/black_overlay"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/viewsCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feeds_item_owner_name"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/feeds_item_viewsCount"
+            android:text="views"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/feeds_item_popup_btn"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/feedData"
+        android:clickable="true"
+        android:layout_below="@+id/feedTopContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:visibility="gone"
+            android:id="@+id/feeds_featured_image"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            fresco:actualImageScaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:visibility="gone"
+            android:textSize="56sp"
+            android:gravity="center"
+            android:textColor="#51fcfcfc"
+            android:text="White Panda"
+            android:layout_width="match_parent"
+            android:layout_height="196dp" />
+
+        <TextView
+            android:id="@+id/feeds_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feeds_featured_image"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:text="How to Write Articles which fascinates me ! How to Write Articles which fascinates me !How to Write Articles which fascinates me !How to Write Articles which fascinates me !How to Write Articles which fascinates me !How to Write Articles which fascinates me !"
+            android:textColor="#1b1b1b"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/snippet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feeds_item_title"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#2f2f2f"
+            android:textSize="16sp"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="Hello this is \nsample text as snippet.." />
+
+        <com.whitepanda.view.TagLayout
+            android:id="@+id/feeds_item_tags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/snippet"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp" />
+
+        <FrameLayout
+            android:id="@+id/seperator"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/feeds_item_tags"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="4dp"
+            android:background="#cccccc" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seperator"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp">
+
+
+            <TextView
+                android:id="@+id/feeds_item_likesCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="112"
+                android:textSize="12sp"
+                android:textColor="@color/black_overlay" />
+
+            <TextView
+                android:id="@+id/feeds_item_like_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/black_overlay"
+                android:textSize="12sp"
+                android:layout_toRightOf="@id/feeds_item_likesCount"
+                android:text="Likes" />
+
+            <TextView
+                android:id="@+id/feeds_item_commentsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_toRightOf="@+id/feeds_item_like_caption"
+                android:text="5"
+                android:textSize="12sp"
+                android:textColor="@color/black_overlay" />
+
+            <TextView
+                android:id="@+id/feeds_item_comments_caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textSize="12sp"
+                android:textColor="@color/black_overlay"
+                android:layout_toRightOf="@id/feeds_item_commentsCount"
+                android:text="Comments" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/touchFeedBackView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

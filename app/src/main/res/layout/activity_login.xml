@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#ffffff"
+    tools:context="com.whitepanda.activity.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:padding="48dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/panda"
+            android:layout_width="144dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"/>
+
+        <LinearLayout
+            android:weightSum="8"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:id="@+id/emailCaption"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:layout_marginRight="8dp"
+                android:id="@+id/emailEditBox"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:background="@drawable/input_box_bg"
+                android:ems="10"
+                android:hint="Email"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:paddingStart="24dp"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="#cccccc"
+                android:paddingLeft="24dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:textColor="#d15858"
+            android:paddingRight="24dp"
+            android:layout_gravity="end"
+            android:id="@+id/email_error"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:weightSum="8"
+            android:layout_marginTop="24dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text=""
+                android:id="@+id/passwordCaption"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/passwordEditBox"
+                android:layout_weight="6"
+                android:layout_marginRight="8dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="#cccccc"
+                android:background="@drawable/input_box_bg"
+                android:hint="Password"
+                android:paddingStart="24dp"
+                android:inputType="textPassword"
+                android:paddingLeft="24dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:textColor="#d15858"
+            android:paddingRight="24dp"
+            android:layout_gravity="end"
+            android:id="@+id/password_error"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:background="?selectableItemBackground"
+            android:textSize="14sp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingRight="32dp"
+            android:id="@+id/forgotPassword"
+            android:layout_gravity="end"
+            android:text="Forgot Your Password ?"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:elevation="2dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="56dp"
+            android:paddingRight="56dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/whitepanda_green_btn"
+            android:id="@+id/loginButton"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="Login" />
+
+        <TextView
+            android:background="?selectableItemBackground"
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:paddingTop="8dp"
+            android:id="@+id/registerBtn"
+            android:layout_marginTop="36dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:text="Register"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:textSize="12sp"
+            android:text="Do not Have an account ?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</ScrollView>

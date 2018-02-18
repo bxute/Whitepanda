@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.whitepanda.activity.WritersTestInstructionActivity">
+
+    <ImageView
+        android:layout_marginTop="48dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/test_pallete"
+        android:layout_width="108dp"
+        android:layout_height="108dp" />
+
+    <TextView
+        android:gravity="center_horizontal"
+        android:layout_margin="36dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:text="PROFICIENCY TEST"
+        android:textSize="24sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:text="Instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="\u25CF   You have to attempt 20 Questions in 10 minutes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:text="\u25CF   You cannot leave the test window , else test will be cancelled !"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/startTestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/test_start_ripple"
+        android:paddingBottom="8dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:paddingTop="8dp"
+        android:text="Start"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/skipTestButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/test_start_ripple"
+        android:paddingBottom="8dp"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        android:paddingTop="8dp"
+        android:text="Skip"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</LinearLayout>

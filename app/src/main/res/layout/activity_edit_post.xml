@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/edit_options_holder"
+    android:layout_below="@+id/edit_post_title"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.whitepanda.activity.PublishPostActivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/editTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/edit_cancel_btn"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/edit_post_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="16dp"
+                    android:text="Update"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <EditText
+            android:id="@+id/edit_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTopBar"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0"
+            android:hint="Title"
+            android:padding="12dp" />
+
+
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/edit_options_holder"
+            android:layout_below="@+id/edit_post_title"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0"
+            android:gravity="top"
+            android:hint="Content"
+            android:inputType="textMultiLine"
+            android:padding="12dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

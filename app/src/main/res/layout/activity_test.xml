@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.whitepanda.activity.WritersTestActivity">
+
+
+    <TextView
+        android:id="@+id/testStartPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:text="Best Of Luck"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/testProgressBar"
+        android:layout_width="match_parent"
+        android:thumb="@drawable/progress_panda"
+        android:layout_height="20dp"
+        android:focusable="false"
+        android:layout_below="@+id/testStartPanel"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@+id/testProgressBar"
+        android:textSize="12sp"
+        android:text="Note* : Please Do Not Switch Apps. Your Test Will be Cancelled !"
+        android:textColor="#ee0000"
+        android:id="@+id/noteMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.whitepanda.view.WhitePandaTestClock
+        android:id="@+id/testClock"
+        android:layout_width="108dp"
+        android:layout_height="108dp"
+        android:layout_below="@+id/noteMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/clock_circle_bg"
+        android:padding="14dp" />
+
+    <TextView
+        android:id="@+id/timeDecay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/testClock"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:text="00:00"
+        android:textColor="#cccccc"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/question_submit"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/noteMessage"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/test_submit_bg"
+        android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/testQuestionContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeDecay"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/question_panel_bg"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="#bbbbbb" />
+
+        <RadioGroup
+            android:id="@+id/optionsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_marginTop="8dp"
+        android:id="@+id/questionLoadingProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/testQuestionContainer"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:padding="16dp"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent"
+        android:text="You Successfully Passed the Test !"
+        android:id="@+id/testStatus"
+        android:layout_below="@+id/testQuestionContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

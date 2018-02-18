@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/edit_options_holder"
+    android:layout_below="@+id/publish_post_title"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fefefe"
+        tools:context="com.whitepanda.activity.PublishPostActivity">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/publishTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/publish_cancel_btn"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#000000"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/publish_post_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:paddingRight="16dp"
+                    android:text="Ask Question"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <EditText
+            android:id="@+id/publish_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/publishTopBar"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0"
+            android:hint="Title"
+            android:padding="12dp" />
+
+
+        <EditText
+            android:id="@+id/publishContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/edit_options_holder"
+            android:layout_below="@+id/publish_post_title"
+            android:layout_margin="8dp"
+            android:background="#f0f0f0"
+            android:gravity="top"
+            android:hint="Content"
+            android:inputType="textMultiLine"
+            android:padding="12dp" />
+
+
+        <LinearLayout
+            android:id="@+id/edit_options_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/add_tag_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:padding="16dp"
+                android:text=""
+                android:textColor="@color/colorAccent"
+                android:textSize="28sp" />
+
+            <com.whitepanda.view.TagLayout
+                android:id="@+id/publish_tag_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

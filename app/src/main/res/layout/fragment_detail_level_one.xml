@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    tools:context="com.whitepanda.activity.RegisterActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/personal_detail_panel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:text="Personal Detail"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/name_holder"
+                android:layout_below="@+id/personal_detail_panel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/user_details_creation_fname_name"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:drawableTint="@color/black_overlay"
+                    android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                    android:background="@drawable/input_box_bg"
+                    android:hint="First Name"
+                    android:paddingStart="4dp"
+                    android:drawablePadding="8dp"
+                    android:textColorHint="@color/black_overlay"
+                    android:paddingLeft="4dp" />
+
+                <EditText
+                    android:id="@+id/user_details_creation_lname_name"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_box_bg"
+                    android:drawableTint="@color/black_overlay"
+                    android:hint="Last Name"
+                    android:paddingStart="4dp"
+                    android:textColorHint="@color/black_overlay"
+                    android:paddingLeft="4dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_below="@+id/name_holder"
+                android:id="@+id/user_details_creation_pen_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_box_bg"
+                android:hint="Pen Name"
+                android:drawableTint="@color/black_overlay"
+                android:paddingStart="8dp"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/ic_create_black_24dp"
+                android:textColorHint="@color/black_overlay"
+                android:paddingLeft="8dp" />
+
+            <RadioGroup
+                android:id="@+id/user_details_creation_genderGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_details_creation_pen_name"
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <RadioButton
+                    android:id="@+id/male_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="true"
+                    android:text="M"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/female_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.13"
+                    android:checked="false"
+                    android:text="F"
+                    android:layout_marginRight="8dp"
+                    android:buttonTint="@color/black_overlay"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/other_radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.13"
+                    android:checked="false"
+                    android:text="Other"
+                    android:buttonTint="@color/black_overlay"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="14sp" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/user_details_creation_mobile_number"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:maxLength="10"
+                android:layout_below="@+id/user_details_creation_genderGroup"
+                android:inputType="phone"
+                android:paddingStart="8dp"
+                android:drawableLeft="@drawable/ic_phone_black_24dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawablePadding="8dp"
+                android:layout_margin="8dp"
+                android:layout_marginRight="4dp"
+                android:paddingEnd="8dp"
+                android:minWidth="24dp"
+                android:background="@drawable/input_box_bg"
+                android:hint="9900990099" />
+
+
+            <TextView
+                android:id="@+id/user_details_creation_dob"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_below="@+id/user_details_creation_pen_name"
+                android:layout_alignParentEnd="true"
+                android:inputType="phone"
+                android:paddingStart="8dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawablePadding="8dp"
+                android:layout_margin="8dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/input_box_bg"
+                android:hint="DOB"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="12dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mailing_detail_panel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="4dp"
+                android:text="Mailing Details"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_below="@+id/mailing_detail_panel_text"
+                android:id="@+id/user_details_creation_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawableLeft="@drawable/ic_room_black_24dp"
+                android:background="@drawable/input_box_bg"
+                android:hint="Address"
+                android:lines="4"
+                android:paddingStart="4dp"
+                android:drawablePadding="8dp"
+                android:textColorHint="@color/black_overlay"
+                android:paddingLeft="4dp" />
+
+            <LinearLayout
+                android:layout_below="@+id/user_details_creation_address"
+                android:id="@+id/city_pin_holder"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/user_details_creation_city"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:drawableLeft="@drawable/ic_business_black_24dp"
+                    android:background="@drawable/input_box_bg"
+                    android:hint="City"
+                    android:paddingStart="4dp"
+                    android:drawablePadding="8dp"
+                    android:textColorHint="@color/black_overlay"
+                    android:paddingLeft="4dp" />
+
+                <EditText
+                    android:id="@+id/user_details_creation_pincode"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:drawableLeft="@drawable/ic_fiber_pin_black_24dp"
+                    android:background="@drawable/input_box_bg"
+                    android:hint="825323"
+                    android:paddingStart="4dp"
+                    android:drawablePadding="8dp"
+                    android:textColorHint="@color/black_overlay"
+                    android:paddingLeft="4dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_below="@+id/city_pin_holder"
+                android:id="@+id/country_state_holder"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/user_details_creation_countary"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="36dp"
+                    android:layout_below="@+id/user_details_creation_address_line2"
+                    android:layout_margin="8dp" />
+
+                <Spinner
+                    android:id="@+id/user_details_creation_state"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="36dp"
+                    android:layout_below="@+id/user_details_creation_address_line2"
+                    android:layout_margin="8dp" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

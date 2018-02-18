@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:textSize="48sp"
+        android:padding="8dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/sorry_icon"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:textColor="#2e2e2e"
+        android:gravity="center_horizontal"
+        android:text="We Are Having Problem while getting your content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginTop="36dp"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:id="@+id/exitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/whitepanda_green_btn"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Exit"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

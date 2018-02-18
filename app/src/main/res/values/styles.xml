@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="ms_stepperStyle">@style/TabStepperStyle</item>
+
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="TabStepperStyle">
+        <item name="ms_stepperType">tabs</item>
+        <item name="ms_activeStepColor">@color/colorAccent</item>
+        <item name="ms_inactiveStepColor">#d7d7d7</item>
+        <item name="ms_bottomNavigationBackground">@color/ms_material_grey_400</item>
+    </style>
+
+    <style name="WhitePandaTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+</resources>

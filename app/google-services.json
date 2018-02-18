@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "983188453959",
+    "firebase_url": "https://whitepanda-53b97.firebaseio.com",
+    "project_id": "whitepanda-53b97",
+    "storage_bucket": "whitepanda-53b97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:983188453959:android:a2c5d2f436ffd6b0",
+        "android_client_info": {
+          "package_name": "com.whitepanda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "983188453959-1ipcndmheu80a1biijmg3evouk830d1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.whitepanda",
+            "certificate_hash": "ec3253198f92dc34421661e2ea83e49fab1ae8f4"
+          }
+        },
+        {
+          "client_id": "983188453959-7326mdomlvtvvjk6mc9r0t9cm4jaiqnk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG6zdb3PauRX0HL5ccSYSZP5zEz9P4u8g"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "983188453959-7326mdomlvtvvjk6mc9r0t9cm4jaiqnk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

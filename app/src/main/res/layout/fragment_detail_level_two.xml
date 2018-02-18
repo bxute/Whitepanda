@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:padding="16dp"
+    tools:context="com.whitepanda.activity.RegisterActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/educational_detail_panel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Educational Details"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/user_details_creation_school_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/educational_detail_panel_text"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_school_black_24dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawablePadding="8dp"
+                android:paddingStart="8dp"
+                android:hint="School Name"
+                android:paddingLeft="8dp" />
+
+            <EditText
+                android:id="@+id/user_details_creation_education_level"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/user_details_creation_school_name"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_local_library_black_24dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawablePadding="8dp"
+                android:paddingStart="8dp"
+                android:hint="Education Level"
+                android:paddingLeft="8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/duration_holder"
+                android:layout_below="@+id/user_details_creation_education_level"
+                android:weightSum="13"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/user_details_creation_start"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/user_details_creation_genderGroup"
+                    android:layout_alignParentEnd="true"
+                    android:inputType="phone"
+                    android:paddingStart="4dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:layout_margin="8dp"
+                    android:paddingEnd="4dp"
+                    android:background="@drawable/input_box_bg"
+                    android:hint="10-03-1982"
+                    android:layout_alignParentRight="true" />
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/black_overlay"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/user_details_creation_end"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/user_details_creation_genderGroup"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/input_box_bg"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:gravity="center"
+                    android:hint="10-03-1982"
+                    android:layout_margin="8dp"
+                    android:inputType="phone"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true" />
+
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/user_details_creation_having_work_experience"
+                android:layout_below="@+id/duration_holder"
+                android:text="Have Work Experience"
+                android:layout_margin="8dp"
+                android:textColor="@color/black_overlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <CheckBox
+                android:id="@+id/user_details_creation_still_studying"
+                android:layout_below="@+id/duration_holder"
+                android:text="Still Studying"
+                android:layout_margin="8dp"
+                android:textColor="@color/black_overlay"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/work_container_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/company_detail_panel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Professional Details"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/user_details_creation_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/company_detail_panel_text"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_domain_black_24dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawablePadding="8dp"
+                android:paddingStart="8dp"
+                android:hint="Company"
+                android:paddingLeft="8dp" />
+
+
+            <EditText
+                android:id="@+id/user_details_creation_work_position"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/user_details_creation_company_name"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_assistant_black_24dp"
+                android:drawableTint="@color/black_overlay"
+                android:drawablePadding="8dp"
+                android:paddingStart="8dp"
+                android:hint="Work Position"
+                android:paddingLeft="8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/work_duration_holder"
+                android:layout_below="@+id/user_details_creation_work_position"
+                android:weightSum="13"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/user_details_creation_work_start"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/user_details_creation_genderGroup"
+                    android:inputType="phone"
+                    android:paddingStart="4dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:layout_margin="8dp"
+                    android:paddingEnd="4dp"
+                    android:background="@drawable/input_box_bg"
+                    android:hint="10-03-1982" />
+
+                <FrameLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/black_overlay"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:id="@+id/user_details_creation_work_end"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/user_details_creation_genderGroup"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/input_box_bg"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:gravity="center"
+                    android:hint="10-03-1982"
+                    android:layout_margin="8dp"
+                    android:inputType="phone"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true" />
+
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/user_details_creation_working_presently"
+                android:layout_below="@+id/work_duration_holder"
+                android:text="Still_working"
+                android:layout_margin="8dp"
+                android:textColor="@color/black_overlay"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.whitepanda">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".application.WhitePandaMain"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/panda" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <service android:name=".fcm.WhitePandaFCMClientInstanceService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".fcm.WhitePandaFCMMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receivers.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ForgotPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EmailVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WritersDetailsRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.Tour"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_tour"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PortfolioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".activity.DetailedFeedViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PublishPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EditPostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".activity.DetailedQuestionViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddQuestionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".activity.WritersTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WritersTestInstructionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RemoteEventActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.PortfolioEditBasicInfo"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.EditExperienceActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.ExperienceActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.EducationActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".activity.EditEducationActivity"  android:screenOrientation="portrait" ></activity>
+    </application>
+
+</manifest>

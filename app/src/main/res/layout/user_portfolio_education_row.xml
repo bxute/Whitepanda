@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="IIIT Vadodara"
+        android:id="@+id/user_profile_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="B.Tech"
+        android:layout_below="@+id/user_profile_school"
+        android:id="@+id/user_profile_degree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="California NYC"
+        android:id="@+id/user_profile_school_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_profile_degree"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:text="2000/02/23 - still"
+        android:layout_below="@+id/user_profile_school_location"
+        android:id="@+id/user_profile_study_tenure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="Work Description"
+        android:layout_below="@+id/user_profile_study_tenure"
+        android:id="@+id/user_profile_education_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

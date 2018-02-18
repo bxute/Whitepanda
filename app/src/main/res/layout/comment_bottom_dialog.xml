@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:background="#fefefe"
+        android:elevation="2dp"
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    <TextView
+        android:id="@+id/cancel_dialog_btn"
+        android:clickable="true"
+        android:textColor="@color/colorAccent"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:text="Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/positive_action_button"
+        android:clickable="true"
+        android:textColor="@color/colorAccent"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_alignParentEnd="true"
+        android:text="Comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:gravity="top"
+        android:hint="Type Here..."
+        android:paddingTop="4dp"
+        android:background="#fefefe"
+        android:layout_below="@+id/buttonContainer"
+        android:id="@+id/comment_dialog_content"
+        android:minHeight="200dp"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"><requestFocus/></EditText>
+
+</RelativeLayout>

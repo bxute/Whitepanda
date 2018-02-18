@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#fefefe"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_marginLeft="8dp"
+        android:id="@+id/answer_owner_pic"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        fresco:placeholderImage="@drawable/profile_placeholder"
+        fresco:roundAsCircle="true" />
+
+
+    <TextView
+        android:id="@+id/answer_owner_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/answer_owner_pic"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:layout_toLeftOf="@+id/popupBtn"
+            android:text="Ankit Kumar"
+        android:textColor="#cc000000"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+
+    <TextView
+        android:background="?selectableItemBackgroundBorderless"
+        android:id="@+id/popupBtn"
+        android:layout_alignParentEnd="true"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:text=""
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/answer_decay_time"
+        android:layout_toLeftOf="@+id/popupBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer_owner_name"
+        android:layout_toRightOf="@+id/answer_owner_pic"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="4 days ago"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/answer_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/answer_owner_pic"
+        android:layout_below="@+id/answer_decay_time"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:lineSpacingExtra="4dp"
+        android:text="hello this is the content of the post and how should be written in well."
+        android:textColor="#fb1d1d1d"
+        android:textSize="13sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/answer_content"
+        android:layout_toRightOf="@+id/answer_owner_pic">
+
+        <TextView
+            android:id="@+id/answer_like_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/answerLikeCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-8dp"
+            android:layout_toRightOf="@+id/answer_like_btn"
+            android:gravity="center"
+            android:text="Like"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/answer_follow_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/answerLikeCaption"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/answerFollowCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-8dp"
+            android:layout_toRightOf="@+id/answer_follow_btn"
+            android:gravity="center"
+            android:text="Follow"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/answer_reply_btn"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/answerFollowCaption"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/answerReplyCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-2dp"
+            android:layout_toRightOf="@+id/answer_reply_btn"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="Reply"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

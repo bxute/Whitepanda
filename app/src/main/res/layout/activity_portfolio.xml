@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.whitepanda.activity.PortfolioActivity">
+
+    <RelativeLayout
+        android:id="@+id/portfolioHeader"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:background="#000000">
+
+        <FrameLayout
+            android:id="@+id/profilePicHolder"
+            android:layout_width="108dp"
+            android:layout_height="match_parent">
+            
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/portfolioUserPic"
+            android:layout_width="108dp"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:src="@drawable/profile_placeholder"
+            fresco:placeholderImage="@drawable/profile_placeholder"
+            fresco:roundAsCircle="true" />
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:id="@+id/profilePicUploadProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        </FrameLayout>
+        
+        <TextView
+            android:id="@+id/portfolioUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_toLeftOf="@+id/editBtn"
+            android:layout_toRightOf="@+id/profilePicHolder"
+            android:text="Ankit Kumar"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/portfolioHeadline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/portfolioUserName"
+            android:layout_toRightOf="@+id/profilePicHolder"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Feeling Good !"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/portfolioHeadline"
+            android:layout_toRightOf="@+id/profilePicHolder"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/editBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true" />
+
+
+        <TextView
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_margin="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/whitepanda_green_btn"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:text="Home"
+            android:id="@+id/gotoHomeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@+id/portfolioHeader"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/experienceHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/experienceLeftContainer"
+                    android:layout_width="56dp"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/experienceEditBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/showMoreExperienceBtn"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:text="+2"
+                        android:textColor="#ffffff"
+                        android:textSize="28sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/experienceRightContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/experienceLeftContainer"
+                    android:background="#000000">
+
+                    <TextView
+                        android:id="@+id/experienceHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="EXPERIENCE"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/emptyExperienceMsg"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="No Experience Added"
+                        android:layout_below="@+id/experienceHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/experienceList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/experienceHeader"></android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/educationHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/experienceHolder"
+                android:layout_marginTop="2dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/educationLeftContainer"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/educationEditBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/showMoreEducationBtn"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:text="+2"
+                        android:textColor="#ffffff"
+                        android:textSize="28sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/educationRightContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/educationLeftContainer"
+                    android:background="#000000">
+
+                    <TextView
+                        android:id="@+id/educationHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="EDUCATION"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/emptyEducationMsg"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="No Education Added"
+                        android:layout_below="@+id/educationHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/educationList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/educationHeader"></android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/skillsHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/educationHolder"
+                android:layout_marginTop="2dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/skillsLeftContainer"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="#ffffff">
+
+                    <TextView
+                        android:id="@+id/skillsEditBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/showMoreSkillsBtn"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@color/colorAccent"
+                        android:gravity="center"
+                        android:text="+2"
+                        android:textColor="#ffffff"
+                        android:textSize="28sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/skillsRightContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/skillsLeftContainer"
+                    android:background="#000000">
+
+                    <TextView
+                        android:id="@+id/skillsHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="12dp"
+                        android:text="SKILLS"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/emptySkillsMsg"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:text="No Skills Added"
+                        android:layout_below="@+id/skillsHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/skillsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/skillsHeader"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    
+
+</RelativeLayout>

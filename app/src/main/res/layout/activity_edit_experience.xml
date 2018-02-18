@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.whitepanda.activity.EditExperienceActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cancel_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/cancel_btn"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="Edit Experience"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:text="Save"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+
+            android:id="@+id/work_container_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/company_detail_panel_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Professional Details"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/org_name"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/company_detail_panel_text"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_domain_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black_overlay"
+                android:hint="Company"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp" />
+
+
+            <EditText
+                android:id="@+id/org_location"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/org_name"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_room_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black_overlay"
+                android:hint="Location"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp" />
+
+
+            <EditText
+                android:id="@+id/position"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/org_location"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_assistant_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black_overlay"
+                android:hint="Work Position"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp" />
+
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/position"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_box_bg"
+                android:drawableLeft="@drawable/ic_create_black_24dp"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/black_overlay"
+                android:hint="Description"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/work_duration_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/description"
+                android:orientation="horizontal"
+                android:weightSum="13">
+
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_below="@+id/user_details_creation_genderGroup"
+                    android:layout_margin="8dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/input_box_bg"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:gravity="center"
+                    android:hint="10-03-1982"
+                    android:inputType="phone"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="18sp" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/black_overlay" />
+
+
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/user_details_creation_genderGroup"
+                    android:layout_margin="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="6"
+                    android:background="@drawable/input_box_bg"
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableTint="@color/black_overlay"
+                    android:gravity="center"
+                    android:hint="10-03-1982"
+                    android:inputType="phone"
+                    android:paddingEnd="4dp"
+                    android:paddingStart="4dp"
+                    android:textSize="18sp" />
+
+
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/still_working"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/work_duration_holder"
+                android:layout_margin="8dp"
+                android:text="Presently Here "
+                android:textColor="@color/black_overlay" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
